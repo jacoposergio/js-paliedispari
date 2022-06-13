@@ -27,11 +27,15 @@ const userWord = prompt('dimmi una parola');
 console.log("parola utente",userWord);        //console log della parola
 
 // pusho la parola dell'utente nell 'array 
+// dividendola in singole lettera con la funzione split
 userWordArray.push(userWord.split(""));
 console.log("array splittato",userWordArray);   // array
 
-// const splitUserWordArray = userWordArray.split;
-// console.log("",splitUserWordArray);
+// uso il ciclo fo per capovolgere l'array
+for (let i = userWordArray.length - 1; i >= 0; i--){
+    console.log("user * i", userWordArray[i]);
+}
+
 
 
 
