@@ -1,43 +1,75 @@
 // TODO  Chiedere all’utente di inserire una parola
 // TODO  Creare una funzione per capire se la parola inserita è palindroma
 
-// creo un array vuoto
-// const userWord =  parseInt(prompt('Dimmi una parola'));
-// const userWordPalindrome = isPalindrome(userWord);
-// console.log("",userWord);
 
-// if( userWordPalindrome === palindromeTrue){
-//     alert('è una parola palindroma')
-// } else{
-//     alert('non è una parola palindroma')
-// }
+const useruserChoice = prompt('dimmi una parola');
 
-// funzione che verifica se la parola inserita è palindroma 
+function isPalindromeuserChoice(){
+
+    
+    // chiedo una parola all'utente
+
+    // const useruserChoice = prompt('dimmi una parola');
+    // creo un array vuoto 
 
 
-// function isPalindrome(userWord){
+    // const useruserChoiceArray = [];
+    // const finaluserChoiceArray = [];
 
-// }
+    // chiedo una parola all'utente
+    // pusho la parola dell'utente nell 'array 
+    // dividendola in singole lettere con la funzione split
 
+    // useruserChoiceArray.push(useruserChoice);
+    // console.log("useruserChoicearray",useruserChoiceArray); 
 
-// creo un array vuoto 
-const userWordArray = [];
-// chiedo una parola all'utente
-const userWord = prompt('dimmi una parola');
-console.log("parola utente",userWord);        //console log della parola
+    // uso il ciclo for per capovolgere l'array
+    // let elementFound = false;
 
-// pusho la parola dell'utente nell 'array 
-// dividendola in singole lettera con la funzione split
-userWordArray.push(userWord.split(""));
-console.log("array splittato",userWordArray);   // array
+    let BackwardsuserChoice = "";
+    for (let i = useruserChoice.length - 1; i >= 0; i--) {
+        BackwardsuserChoice += useruserChoice[i];
+        console.log("Parola al contrario",BackwardsuserChoice);
+    
+        // finaluserChoiceArray.push(BackwardsuserChoice);
+        // console.log("array final",finaluserChoiceArray);
 
-// uso il ciclo fo per capovolgere l'array
-for (let i = userWordArray.length - 1; i >= 0; i--){
-    console.log("user * i", userWordArray[i]);
+        
+
+        if(BackwardsuserChoice === useruserChoice) {
+            alert=('la parola è palindroma')
+        }else{
+            alert('La parola non è palindroma');
+        }
+
+        // }console.log("",elementFound);
+    }
+
 }
 
+isPalindromeuserChoice();
+
+// function isPalindrome(UseruserChoice) {
+//     let backwarduserChoice = "";
+//     for (let i = UseruserChoice.length - 1; i >= 0; i--) {
+//         backwarduserChoice += UseruserChoice[i];
+//     }
+//     console.log("useruserChoice",UseruserChoice);
+//     return UseruserChoice;
+// }
+
+// isPalindrome('hello');
+// console.log("is palindrome func",isPalindrome);
 
 
 
+// function reverseString(str) {
+//     var newString = "";
+//     for (var i = str.length - 1; i >= 0; i--) {
+//         newString += str[i];
+//     }
+//     return newString;
+// }
 
-
+// reverseString('icao');
+// console.log("",reverseString);
