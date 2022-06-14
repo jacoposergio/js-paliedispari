@@ -1,13 +1,17 @@
 // TODO  Chiedere all’utente di inserire una parola
 // TODO  Creare una funzione per capire se la parola inserita è palindroma
 
+    // chiedo una parola all'utente
+const userChoice = prompt('dimmi una parola');
 
-const useruserChoice = prompt('dimmi una parola');
 
-function isPalindromeuserChoice(){
+isPalindromeuserChoice(userChoice);
+
+
+function isPalindromeuserChoice(originalWord){
 
     
-    // chiedo una parola all'utente
+
 
     // const useruserChoice = prompt('dimmi una parola');
     // creo un array vuoto 
@@ -27,27 +31,26 @@ function isPalindromeuserChoice(){
     // let elementFound = false;
 
     let BackwardsuserChoice = "";
-    for (let i = useruserChoice.length - 1; i >= 0; i--) {
-        BackwardsuserChoice += useruserChoice[i];
+    for (let i = originalWord.length - 1; i >= 0; i--) {
+        BackwardsuserChoice += originalWord[i];
         console.log("Parola al contrario",BackwardsuserChoice);
-    
+    }
         // finaluserChoiceArray.push(BackwardsuserChoice);
         // console.log("array final",finaluserChoiceArray);
 
-        
+        let isPalindrome;
 
-        if(BackwardsuserChoice === useruserChoice) {
-            alert=('la parola è palindroma')
+        if(originalWord === BackwardsuserChoice) {
+            isPalindrome = true;
         }else{
-            alert('La parola non è palindroma');
+            isPalindrome = false;
         }
 
         // }console.log("",elementFound);
     }
 
-}
 
-isPalindromeuserChoice();
+
 
 // function isPalindrome(UseruserChoice) {
 //     let backwarduserChoice = "";
@@ -73,3 +76,4 @@ isPalindromeuserChoice();
 
 // reverseString('icao');
 // console.log("",reverseString);
+
